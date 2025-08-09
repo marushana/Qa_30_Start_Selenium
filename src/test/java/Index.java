@@ -30,6 +30,9 @@ public class Index {
         //by tagname
         WebElement el =  wd.findElement(By.tagName("button"));
         WebElement input = wd.findElement(By.tagName("input"));
+
+        WebElement input1 = wd.findElement(By.cssSelector("input"));
+
         List<WebElement> list = wd.findElements(By.tagName("input"));
 
         //by Class
