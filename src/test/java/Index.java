@@ -29,24 +29,32 @@ public class Index {
     public void cssLocators(){
         //by tagname
         WebElement el =  wd.findElement(By.tagName("button"));
-        WebElement input = wd.findElement(By.tagName("input"));
+        WebElement el1 = wd.findElement(By.xpath("//button"));
 
+        WebElement input = wd.findElement(By.tagName("input"));
         WebElement input1 = wd.findElement(By.cssSelector("input"));
+        WebElement input3 = wd.findElement(By.xpath("//input"));;
 
         List<WebElement> list = wd.findElements(By.tagName("input"));
 
         //by Class
         WebElement div = wd.findElement(By.className("container"));
         WebElement div1 = wd.findElement(By.cssSelector(".container"));
+        WebElement div2 = wd.findElement(By.xpath("//*[@class='container'"));
+
         List<WebElement> list1 = wd.findElements(By.className("nav-item"));
         List<WebElement> list2 = wd.findElements(By.cssSelector(".nav-item"));
+        List<WebElement> list3 = wd.findElements(By.xpath("//*[@class='nav-item']"));
+
 
         //by ID
         WebElement nav = wd.findElement(By.id("nav"));
         WebElement nav1 = wd.findElement(By.cssSelector("#nav"));
+        WebElement nav2 = wd.findElement(By.xpath("//*[@id='nav']"));
 
         //by attribute
         WebElement inputEmail = wd.findElement(By.cssSelector("[placeholder = 'Type your name']"));
+        WebElement inputEmail1 = wd.findElement(By.xpath("//*[@placeholder = 'Type your name']"));
         //start
         WebElement inputEmail2 = wd.findElement(By.cssSelector("[placeholder^='Type']"));
         //end
